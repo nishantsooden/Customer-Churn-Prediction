@@ -1,32 +1,33 @@
-# Customer Churn Prediction
+# 🔄 Customer Churn Prediction
 
-This project predicts whether a customer is likely to **churn (leave the service)** using a **Logistic Regression model**.  
-It is built as an **end-to-end machine learning project** with proper preprocessing, model pipeline, and deployment using **Streamlit**.
-
----
-
-##  Problem Statement
-Customer churn is a major challenge for subscription-based businesses.  
-The goal of this project is to identify customers who are likely to churn based on their usage patterns, services, and support history, so that businesses can take proactive retention actions.
+## 📌 Project Overview
+Customer Churn Prediction is an **end-to-end Machine Learning project** that predicts whether a customer is likely to **churn (leave the service)**.  
+The project uses a **Logistic Regression model** with a complete preprocessing and modeling pipeline and is deployed using **Streamlit** for real-time predictions.
 
 ---
 
-##  Dataset Overview
-The dataset contains customer-level information including:
+## 🎯 Problem Statement
+Customer churn is a major challenge for **subscription-based businesses**.  
+The objective of this project is to identify customers who are likely to churn based on their usage patterns, service subscriptions, and support history, enabling businesses to take **proactive retention actions**.
+
+---
+
+## 📊 Dataset Overview
+The dataset contains customer-level information such as:
 - Contract details
-- Billing information
+- Billing and payment information
 - Internet and support services
 - Customer tenure and support interactions
 
-**Target Variable**
-- `churn` → Yes / No
+### 🎯 Target Variable
+- **`churn`** → Yes / No
 
-**Note:**  
-Identifier columns such as `customer_id` were removed as they do not contribute to prediction and may cause data leakage.
+### ⚠️ Note
+Identifier columns such as **`customer_id`** were removed as they do not contribute to prediction and may lead to **data leakage**.
 
 ---
 
-## Features Used
+## 🧾 Features Used
 - tenure  
 - monthly_charges  
 - total_charges  
@@ -39,33 +40,73 @@ Identifier columns such as `customer_id` were removed as they do not contribute 
 
 ---
 
-##  Model Used
+## 🧠 Model Used
 - **Logistic Regression**
-- Implemented using a **complete ML pipeline** including:
-  - Data preprocessing
-  - Encoding of categorical variables
-  - Feature scaling
-  - Model training
 
-**Why Logistic Regression?**
-- Simple and interpretable baseline model  
+### 🔧 ML Pipeline Includes:
+- Data preprocessing
+- Encoding categorical variables
+- Feature scaling
+- Model training and evaluation
+
+### ❓ Why Logistic Regression?
+- Simple and highly interpretable  
 - Low risk of overfitting  
-- Suitable for binary classification problems like churn  
+- Well-suited for **binary classification** problems like customer churn  
 
 ---
 
-##  Model Performance
-- **Training Accuracy:** ~77%
-- **Testing Accuracy:** ~77%
+## 📈 Model Performance
+- **Training Accuracy:** ~77%  
+- **Testing Accuracy:** ~77%  
 
-The similar train and test accuracy indicates **good generalization** and no overfitting.  
-The focus of this project is on building a **stable, explainable, and production-ready model** rather than chasing unrealistically high accuracy.
+The similar training and testing accuracy indicates **good generalization** and no overfitting.  
+The focus of this project is on building a **stable, explainable, and production-ready model**, rather than chasing unrealistically high accuracy.
 
 ---
 
-##  Deployment
-The trained pipeline is deployed using **Streamlit** to provide real-time churn predictions based on user inputs.
+## 🚀 Deployment
+The trained machine learning pipeline is deployed using **Streamlit**, allowing users to input customer details and receive **real-time churn predictions**.
 
-### Run the app locally:
+---
+
+
+
+## ▶️ How to Run the Project Locally
+
+### 1️⃣ Clone the repository
 ```bash
-streamlit run customer_app.py
+git clone < https://github.com/nishantsooden/Customer-Churn-Prediction.git >
+cd Customer_Churn_Prediction
+
+Customer-Churn-Prediction/
+│
+├── data/
+│   └── customer_churn_dataset.csv
+│
+├── Model/
+│   └── customer.pkl
+│
+├── Notebooks/
+│   └── customer.ipynb
+│
+├── Src/
+│   └── customer_app.py
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+2️⃣ Create and activate virtual environment
+
+python -m venv myenv
+myenv\Scripts\activate
+
+3️⃣ Install dependencies
+pip install -r requirements.txt
+
+4️⃣ Run Streamlit app
+streamlit run Src/app.py
+
+
+
